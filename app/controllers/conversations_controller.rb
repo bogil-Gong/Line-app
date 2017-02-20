@@ -8,6 +8,15 @@ class ConversationsController < ApplicationController
       format.js
     end
   end
+  def close
+    @conversation = Conversation.find(params[:id])
+
+    session[:conversations].delete(@conversation.id)
+
+    respond_to do |format|
+      format.js
+    end
+  end
 
   private
 

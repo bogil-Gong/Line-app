@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://pub-redis-10809.ap-northeast-1-2.1.ec2.garantiadata.com:10809

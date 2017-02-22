@@ -13,6 +13,9 @@ Rails.application.configure do
   config.active_support.deprecation = :notify
   config.log_formatter = ::Logger::Formatter.new
 
+  config.action_cable.url = 'wss://fierce-shelf-77877.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = ['https://fierce-shelf-77877.herokuapp.com', /http:\/\/fierce-shelf-77877.herokuapp.*/]
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter

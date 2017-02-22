@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.5'
 #Add gem
 gem "devise"
 gem 'bootstrap-sass'
+gem 'redis'
 
 group :production do
   gem 'pg'

@@ -20,10 +20,8 @@ gem 'jbuilder', '~> 2.5'
 gem "devise"
 gem 'bootstrap-sass'
 gem 'redis'
-<<<<<<< HEAD
+
 gem 'devise-bootstrapped'
-=======
->>>>>>> d6871c8a5c8cc014019ce8bce9fecd7ed19fb5ba
 
 group :production do
   gem 'pg'

@@ -30,3 +30,12 @@
     }
   });
 })();
+
+var sub_send = document.getElementById("sub_send");
+var txt_send = document.getElementById("txt_send");
+
+txt.addEventListener("keypress", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13)
+        sub_send.click();
+});

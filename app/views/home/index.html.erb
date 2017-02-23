@@ -7,6 +7,8 @@
     </ul>
   </div>
 
+
+
   <div class="col-md-3">
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -15,7 +17,11 @@
       <div class="panel-body">
         <ul>
           <% @users.each do |user| %>
-            <li><%= link_to user.email, conversations_path(user_id: user), remote: true, method: :post %></li>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <%= link_to user.email, conversations_path(user_id: user), remote: true, method: :post %>
+              </div>
+            </div>
           <% end %>
         </ul>
       </div>

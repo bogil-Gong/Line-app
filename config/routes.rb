@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
-
+  devise_for :users, :controller => {:registrations => "user/registragtions"}
   root to: 'home#index'
 
   resources :conversations, only: [:create] do

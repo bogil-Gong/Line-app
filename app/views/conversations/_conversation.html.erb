@@ -1,7 +1,7 @@
 <li>
   <div class="panel panel-default" data-conversation-id="<%= conversation.id %>">
     <div class="panel-heading">
-      <%= link_to conversation.opposed_user(user).email, '', class: 'toggle-window' %>
+      <%= link_to conversation.opposed_user(user).username, '', class: 'toggle-window' %>
       <%= link_to "x", close_conversation_path(conversation), class: "btn btn-default btn-xs pull-right", remote: true, method: :post %>
     </div>
 
@@ -14,8 +14,12 @@
       <form class="new_message" name="new_message">
         <input name="conversation_id" type="hidden" value="<%= conversation.id %>">
         <input name="user_id" type="hidden" value="<%= user.id %>">
-        <input type="text" name="body" class="form-control" id = "txt_send"></input>
-        <input type="submit" class="btn btn-success" value="Send"  id = "sub_send">
+        <div class="col-md-11 no-padding">
+          <input type="text" name="body" class="form-control" id = "txt_send"></input>
+        </div>
+        <div class="col-md-1 no-padding left-padding">
+          <input type="submit" class="btn btn-success" value="Send"  id = "sub_send">
+        </div>
       </form>
     </div>
   </div>

@@ -31,11 +31,14 @@
   });
 })();
 
-var sub_send = document.getElementById("sub_send");
-var txt_send = document.getElementById("txt_send");
 
-txt.addEventListener("keypress", function(event) {
-    event.preventDefault();
-    if (event.keyCode == 13)
-        sub_send.click();
-});
+
+document.addEventListener("DomContentLoaded", function(){
+  document.getElementById("txt_send")
+      .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode == 13) {
+          document.getElementById("sub_send").click();
+      }
+  });
+}, false);

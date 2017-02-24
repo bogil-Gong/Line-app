@@ -20,8 +20,9 @@ gem 'jbuilder', '~> 2.5'
 gem "devise"
 gem 'bootstrap-sass'
 gem 'redis'
-
+gem 'jquery-rails'
 gem 'devise-bootstrapped'
+gem 'jquery-ui-rails'
 
 group :production do
   gem 'pg'
